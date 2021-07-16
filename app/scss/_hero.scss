@@ -1,11 +1,14 @@
 .hero{
+    background-color: $veryLightGray;
 
-    @include breakpoint-up(large){
-        display: flex;
-        min-height: 41rem;
-        align-items: center;
+    .container{
+        @include breakpoint-up(large){
+            display: flex;
+            
+            align-items: center;
+        }    
     }
-
+    
     &__image{
         //Parent of psuedo ::before must be relative so that ::before can be absolute
         
@@ -20,11 +23,12 @@
             flex: 3;
             order: 2;
             height: 41rem;
-            background-image: url('/images/bg-intro-desktop.svg');
-            background-position: left center;
+            background-image: none;
+            //background-image: url('/images/bg-intro-desktop.svg');
+            //background-position: left center;
         }
 
-        &::before{
+        &::after{
             content: "";
             position: absolute;
             width: 100%;
@@ -33,6 +37,33 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
+
+            @include breakpoint-up(large){
+                width: 120%;
+                height: 122%;
+                background-size: 94%;                
+                background-position: center 150%;
+                left: 22%;
+            }
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/bg-intro-desktop.svg');
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            
+
+            @include breakpoint-up(large){
+                width: 150%;
+                background-size: 120%;
+                background-position: 0% 35%;
+
+            }
         }
     }
 
@@ -43,6 +74,7 @@
         @include breakpoint-up(large){
             flex: 2;
             order: 1;
+            text-align: left;
         }
 
         h1{
@@ -51,6 +83,10 @@
             line-height: 1.15;
             color: $darkBlue;
             margin-bottom: 1.5rem;
+
+            @include breakpoint-up(large){
+                font-size: $font-xlg;
+            }
         }
 
         p{

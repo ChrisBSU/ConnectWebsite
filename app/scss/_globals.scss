@@ -19,6 +19,10 @@ body{
     &.noscroll{
         overflow: hidden;
     }
+
+    @include breakpoint-up(large){
+        font-size: $font-med;
+    }
 }
 
 h1, h2, h3{
