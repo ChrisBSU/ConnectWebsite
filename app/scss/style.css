@@ -330,6 +330,12 @@ button, .button {
   min-height: 17.5rem;
 }
 
+@media (min-width: 40em) {
+  .hero__image {
+    min-height: 25rem;
+  }
+}
+
 @media (min-width: 64em) {
   .hero__image {
     -webkit-box-flex: 3;
@@ -352,6 +358,13 @@ button, .button {
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+@media (min-width: 40em) {
+  .hero__image::after {
+    background-size: 52%;
+    background-position: center 60%;
+  }
 }
 
 @media (min-width: 64em) {
@@ -378,8 +391,8 @@ button, .button {
 @media (min-width: 64em) {
   .hero__image::before {
     width: 150%;
-    background-size: 120%;
-    background-position: 0% 35%;
+    background-size: 122%;
+    background-position: 0% 83%;
   }
 }
 
@@ -416,5 +429,21 @@ button, .button {
 .hero__text p {
   line-height: 1.5;
   margin-bottom: 2.25rem;
+}
+
+@media (min-width: 64em) {
+  .feature__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 64em) {
+  .feature__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

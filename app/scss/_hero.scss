@@ -19,6 +19,11 @@
         background-position: center center;
         min-height: 17.5rem;
 
+        @include breakpoint-up(medium){
+            min-height: 25rem;
+            
+        }
+
         @include breakpoint-up(large){
             flex: 3;
             order: 2;
@@ -37,6 +42,11 @@
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
+
+            @include breakpoint-up(medium){
+                background-size: 52%;
+                background-position: center 60%;
+            }
 
             @include breakpoint-up(large){
                 width: 120%;
@@ -57,11 +67,12 @@
             background-repeat: no-repeat;
             background-position: center bottom;
             
+            
 
             @include breakpoint-up(large){
                 width: 150%;
-                background-size: 120%;
-                background-position: 0% 35%;
+                background-size: 122%;
+                background-position: 0% 83%;
 
             }
         }
